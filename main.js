@@ -30,7 +30,7 @@ function goToNextStep() {
         currentStep++;
         showStep(currentStep);
     }
-    
+
     ajouter();
 }
 
@@ -116,7 +116,3 @@ function sect(event) {
         }
     }
 }
-
-
-
-
