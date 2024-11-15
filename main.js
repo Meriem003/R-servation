@@ -1,7 +1,7 @@
-let currentStep = 1;
+let count = 1;
 const totalSteps = 5;
 
-function showStep(step) {
+function addStep(step) {
     document.querySelectorAll('.tab').forEach((tab) => {
         tab.style.display = 'none';
     });
@@ -26,22 +26,22 @@ function ajouter() {
 }
 
 function goToNextStep() {
-    if (currentStep < totalSteps) {
-        currentStep++;
-        showStep(currentStep);
+    if (count < totalSteps) {
+        count++;
+        addStep(count);
     }
 
     ajouter();
 }
 
 function goToPreviousStep() {
-    if (currentStep > 1) {
-        currentStep--;
-        showStep(currentStep);
+    if (count > 1) {
+        count--;
+        addStep(count);
     }
 }
 document.addEventListener('DOMContentLoaded', () => {
-    showStep(currentStep);
+    addStep(count);
 });
 
 let num1 = document.getElementById("nr0");
